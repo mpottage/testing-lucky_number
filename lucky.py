@@ -2,7 +2,7 @@ import re
 def convert(word): #Converts letters in a word to their pythagorean indices.
     return [((ord(ch)-ord("A"))%9+1) for ch in word]
 def input_parts(): #Returns one number sublist for each input full name part.
-    is_name = re.compile("^( *[a-zA-Z]+)+ *$")
+    is_name = re.compile("^(?: *[a-zA-Z]+)+ *$")
     full_name = input("Enter your full name: ")
     while not is_name.match(full_name):
         full_name = input("Bad name, try again: ")
